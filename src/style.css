@@ -1,4 +1,65 @@
 * {
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+  overflow: hidden;
+}
+
+#home-page {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #5072A7;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  z-index: 1000;
+  transition: opacity 0.8s ease;
+  pointer-events: all;
+}
+
+#home-page.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+#title {
+  font-size: 6rem;
+  color: white;
+  font-weight: 300;
+  letter-spacing: 0.5rem;
+  text-transform: lowercase;
+}
+
+#enter-btn {
+  padding: 1rem 3rem;
+  font-size: 1.2rem;
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+  cursor: pointer;
+  text-transform: lowercase;
+  letter-spacing: 0.2rem;
+  transition: all 0.3s ease;
+}
+
+#enter-btn:hover {
+  background: white;
+  color: #5072A7;
+}
+
+#app {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
 }
